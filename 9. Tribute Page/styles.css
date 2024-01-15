@@ -10,7 +10,6 @@ main{
     margin-left:15px;
     margin-right:15px;
     
-    padding-bottom: 15px;
     padding-top: 0;
     background-color: rgb(238,238,238);
 }
@@ -25,11 +24,14 @@ p{
     text-align: center;
 }
 
+
 #img-div{
+    display: block;
     text-align: center;
     margin-left: 17px;
     margin-right: 17px;
     background-color: white;
+    align-items: center;
 }
 
 #img-caption{
@@ -53,3 +55,16 @@ li{
     padding-bottom: 23px;
 }
 
+blockquote{
+    margin:0 auto 50px auto;
+    text-align: left;
+    max-width: 37%;
+    
+}
+
+#image{
+    display: block;
+    max-width:100%;
+
+
+}
