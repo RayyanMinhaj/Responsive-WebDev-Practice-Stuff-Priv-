@@ -1,0 +1,68 @@
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    color: purple;
+}
+
+h3{
+    font-family: Arial, Helvetica, sans-serif;
+    color: purple;
+    font-style: italic;
+}
+
+
+
+body{
+    background-color: pink;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+
+    margin-bottom: 200px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px; /* Add margin between image and buttons */
+}
+
+
+.button-yes, .button-no{
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 1px solid black; /* Change border color */
+    border-radius: 5px;
+    background-color: purple; /* Change background color */
+    color: #fff; /* Change text color */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.button-yes:hover {
+    background-color: #0056b3; /* Change background color on hover */
+    color: #fff; /* Change text color on hover */
+}
+.button-no:hover {
+    background-color: #0056b3; /* Change background color on hover */
+    color: #fff; /* Change text color on hover */
+}
+
+
+.card {
+    margin-top:200px;
+
+    text-align: center;
+    padding-left: 15px;
+    padding-right:15px;
+
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    line-height: 1.5;
+    border: 3px solid black;
+
+}

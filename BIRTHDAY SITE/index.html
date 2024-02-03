@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Happy Birthday!!</title>
+        <link rel="stylesheet" href="./styles.css">
+
+
+        <style>
+            /* Add a class for styling the moved button */
+            .button-yes.moved {
+                position: absolute;
+                left: 50%; /* Center horizontally */
+                top: 50%; /* Center vertically */
+                transform: translate(-50%, -50%);
+                transition: left 0.2s ease-out, top 0.2s ease-out; /* Add transition */
+               
+        
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <div class="card">
+            <h1 id="header1">Happy Birthday Saroo!</h1>
+            <img src="cat.gif" id="imager">
+            <h3>You have happiness, and I have sorrow<br>You have peace and I have stress<br>You have life, and I have death<br>You have everything in life, but I have you<br><br>No matter how much I do not have,<br> I will forever praise the Lord, for I have met you. </h3>
+           
+
+
+            <br>
+            <h3>Do you want to redeem your birthday gift? 😏</h3>
+            <div class="button-container">
+                <button class="button-no" id="noButton">NO</button>
+                <button class="button-yes" id="yesButton">YES</button>
+            </div>
+            <br>
+        </div>
+
+        
+
+
+
+
+
+
+        <script>
+            const noButton = document.getElementById('noButton');
+            const img_change = document.getElementById('imager');
+
+
+
+             noButton.addEventListener('click',()=>{
+                img_change.src="cat2.gif";
+                document.getElementById('header1').innerText="You chose not to redeem your gift 😔😔😔😔";
+                //alert('You chose not to redeem your birthday gift 😔😔😔😔')
+
+             });
+            // Get the "YES" button element
+            const yesButton = document.getElementById('yesButton');
+    
+            // Add a mouseover event listener to the button
+            yesButton.addEventListener('mouseenter', () => {
+                // Generate random positions
+                const randomX = Math.floor(Math.random() * window.innerWidth);
+                const randomY = Math.floor(Math.random() * window.innerHeight);
+    
+                // Apply new positions to the button with a delay
+                setTimeout(() => {
+                    yesButton.style.left = `${randomX}px`;
+                    yesButton.style.top = `${randomY}px`;
+    
+                    // Add a class to apply additional styling for the moved button
+                    yesButton.classList.add('moved');
+                }, 100); // Set the delay (in milliseconds)
+            });
+    
+            // Add a mouseout event listener to reset the button position
+            //yesButton.addEventListener('mouseout', () => {
+                // Remove the class and reset position
+            //    yesButton.classList.remove('moved');
+            //    yesButton.style.left = '';
+            //    yesButton.style.top = '';
+            //});
+        </script>
+    </body>
+</html>
