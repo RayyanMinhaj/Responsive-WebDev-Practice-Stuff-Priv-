@@ -22,7 +22,7 @@
 
     </head>
 
-    <body>
+    <body onload="funfetti()">
         <div class="card">
             <h1 id="header1">Happy Birthday Saroo!</h1>
             <img src="cat.gif" id="imager">
@@ -43,16 +43,25 @@
 
 
 
-
-
-
+        <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
         <script>
+            function funfetti(){
+                confetti({
+                    spread:200,
+                    particleCount:250,
+                    startVelocity:45,
+                    gravity:0.5,
+                    ticks:300
+                });
+            }
+
+
             const noButton = document.getElementById('noButton');
             const img_change = document.getElementById('imager');
 
+            
 
-
-             noButton.addEventListener('click',()=>{
+            noButton.addEventListener('click',()=>{
                 img_change.src="cat2.gif";
                 document.getElementById('header1').innerText="You chose not to redeem your gift 😔😔😔😔";
                 //alert('You chose not to redeem your birthday gift 😔😔😔😔')
